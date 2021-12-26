@@ -5,15 +5,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap');
 /* font-family: 'Sarala', sans-serif; */
 
+
+/* Configs Globais e Iniciais */
+:root{
+    --cor-texto: #FFF2E7;
+    --cor-background: #2F2325, #8E5D52;
+
+    --font-texto: 'Sarala', sans-serif;
+    --font-peso: normal;
+}
 *{
     margin: 0px;
     padding: 0px;
+    color: var(--cor-texto);
+    font-family: var(--font-texto);
+    font-weight: var(--font-peso);
+}
+
+#icone-ballerine{
+    max-width: 72px;
+    min-width: 0px;
+}
+#ori-bot{
+    height: 430px;
 }
 
 body{
-    background-image: linear-gradient(45deg, #2F2325, #8E5D52);
+    background-image: linear-gradient(45deg, var(--cor-background));
 }
+
+/* Cabeçalho */
+header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+nav{
+    display: flex;
+    gap: 30px;
+
+    font-family: var(--font-texto);
+}
+nav > a{
+    text-decoration: none;
+}
+
+/* Conteúdo Principal */
+main > section{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+main > section > div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Seção Superior */
 h1{
-    font-family: 'Righteous', cursive;
-    font-weight: normal;
+    font-family: 'Righteous';
+    font-size: 2.5em;
+    font-weight: bold;
+}
+button{
+    background-color: #FFF2E7;
+    color: black;
+    font-weight: 400;
+    font-size: 1em;
+
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.250);
+
+    padding: 10px;
+    width: 180px;
+    height: 60px;
+
+    border: none;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: rgba(236, 214, 196, 0.53);
+}
+
+/* Seção Inferior */
+.secao-inferior{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;    
+}
+.secao-inferior > h3{
+    font-weight: bolder;
+    font-size: 1.3em;
+    border-top: 0.4px solid white;
+    margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+strong{
+    font-weight: bolder;
+}
+
+/* Rodapé */
+footer > img{
+    padding: 32px;
+    display: block;
+    margin: auto;
 }
